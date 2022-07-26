@@ -20,7 +20,7 @@ const Checkout = () => {
 
   return (
     <div className="checkout container">
-      <div className="card text-center">
+      <div className="card text-center text-dark">
         <div className="card-header">Resúmen</div>
         <div className="card-body">
           <h5 className="card-title">Total: ${totalPrice}</h5>

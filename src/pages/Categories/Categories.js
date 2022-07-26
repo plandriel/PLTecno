@@ -41,24 +41,6 @@ const Categories = () => {
         });
     }, [categoryId]);
 
-  //     .then((querySnapshot) => {
-  //       if (querySnapshot.size === 0) {
-  //         console.log("No results!");
-  //       }
-  //       setProducts(
-  //         querySnapshot.docs.map((doc) => {
-  //           return { id: doc.id, ...doc.data() };
-  //         })
-  //       );
-  //     })
-  //     .catch((error) => {
-  //       console.log("Error searching items", error);
-  //     })
-  //     .finally(() => {
-  //       setLoading(false);
-  //     });
-  // }, [categoryId]);
-
   return (
     <div className="categories">
       <h1>Categoría {categoryId}</h1>

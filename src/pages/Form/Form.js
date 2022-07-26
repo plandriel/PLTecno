@@ -130,13 +130,13 @@ const Form = () => {
     } catch (err) {
       console.log("Ha ocurrido un error creando la orden de compra");
     }
-    updateDataFirebase();
+    //updateDataFirebase();
   }
 
   if (orderId) {
     return (
       <>
-        <div className="container">
+        <div className="container text-white">
           <div className="py-5 text-center mt-5">
             <h2 className="mt-5">¡Gracias por elegirnos!</h2>
             <h4 className="my-5">La compra se ha realizado exitosamente.</h4>
@@ -154,14 +154,14 @@ const Form = () => {
   return (
     <>
       <div className="container">
-        <div className="text-center py-5 mt-5">
+        <div className="text-center text-white py-5 mt-5">
           <h4 className="mt-5">
             Completa el formulario con tus datos para confirmar la compra.
           </h4>
         </div>
-        <div className="row">
+        <div className="row text-white">
           <div className="col-md-12">
-            <form>
+            <form className="d-flex flex-column">
               <div className="row g-3">
                 <Field
                   inputLabel="inputName"

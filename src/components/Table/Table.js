@@ -18,11 +18,11 @@ const Table = () => {
   }, [cart, setQnt]);
 
   return (
-    <div className="table-data">
+    <div className="table-data text-white">
       <div className="table-data__title">
         <h1>Carrito</h1>
       </div>
-      <table className="table">
+      <table className="table text-white">
         <thead className="thead-dark">
           <tr>
             <th scope="col">Cantidad</th>
