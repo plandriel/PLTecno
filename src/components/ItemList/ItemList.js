@@ -44,10 +44,10 @@ const ItemList = ({ onAdd }) => {
         <div className="list-container__details">
           <div className="list-container__details-categories">
             <h2>Categorías</h2>
-            <Link to="/categories/memorias">Memorias</Link>
-            <Link to="/categories/monitores">Monitores</Link>
-            <Link to="/categories/procesadores">Procesadores</Link>
-            <Link to="/categories/almacenamiento">almacenamiento</Link>
+            <button className="btn btn-primary button_categories"><Link to="/categories/memorias">Memorias</Link></button>
+            <button className="btn btn-primary button_categories"><Link to="/categories/monitores">Monitores</Link></button>
+            <button className="btn btn-primary button_categories"><Link to="/categories/procesadores">Procesadores</Link></button>
+            <button className="btn btn-primary button_categories"><Link to="/categories/almacenamiento">almacenamiento</Link></button>
           </div>
           <div className="list-container__details-title">
             <h3>Productos</h3>

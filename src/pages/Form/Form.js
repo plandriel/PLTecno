@@ -130,7 +130,7 @@ const Form = () => {
     } catch (err) {
       console.log("Ha ocurrido un error creando la orden de compra");
     }
-    //updateDataFirebase();
+    updateDataFirebase();
   }
 
   if (orderId) {

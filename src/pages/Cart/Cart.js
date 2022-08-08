@@ -17,7 +17,7 @@ const Cart = () => {
           <div class="card">
 						<div class="card-body">
               <div class="col-sm-12 empty-cart-cls text-center">
-                <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid" />
+                <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid" alt="Carrito Vacio" />
                 <h3><strong>Tu carrito esta vacio!</strong></h3>
                 <h4>Agrega algo para comprar y ser feliz :)</h4>
                 <Link to="/" className="btn btn-primary">

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import ItemCount from "../ItemCount/ItemCount";
 import Item from "../Item/Item";
 import CartContext from "../../contexts/cartContext";
 
@@ -53,12 +52,7 @@ const ItemDetail = ({ product }) => {
   return (
     <div style={style} className="item-detail">
       <Item product={product} />
-      {/* <ItemCount
-        initial={1}
-        min={0}
-        max={product.stock}
-        setQuantity={setQuantity}
-      />*/}
+      
       <Button
         variant="contained"
         color="primary"
