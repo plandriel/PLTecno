@@ -29,7 +29,7 @@ const ItemCount = ({ initial, min, max, setQuantity }) => {
           >
             <RemoveIcon />
           </span>
-          <span className="counter__content-controls-value"> {counter} </span>
+          <span className="counter__content-controls-value text-dark"> {counter} </span>
           <span
             className="counter__content-controls-add"
             onClick={handleIncrement}

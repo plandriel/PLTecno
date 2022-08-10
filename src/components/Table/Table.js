@@ -9,6 +9,8 @@ const Table = () => {
     setCart(cart.filter((product, i) => i !== index));
   };
 
+  
+
   useEffect(() => {
     setQnt(
       cart

@@ -7,39 +7,19 @@ const Item = ({ product }) => {
 
   return (
 
-    <div class="cardProduct">
+    <div className="cardProduct">
       <Link to={`/item/${product.id}`}>
-        <div class="imgBox">
-          <img src={image} alt={name} class="product" />
+        <div className="imgBox">
+          <img src={image} alt={name} className="product" />
         </div>
 
-        <div class="contentBox">
+        <div className="contentBox">
           <h3>{name}</h3>
-          <h2 class="price">$ {price}</h2>
-          <p class="buy">Comprar YA!</p>
+          <h2 className="price">$ {price}</h2>
+          <p className="buy">Comprar YA!</p>
         </div>
       </Link>
     </div>
-
-
-
-
-    // <div className="link">
-    //   <Link to={`/item/${product.id}`}>
-    //     <div className="counter link__item" style={{ width: "15rem" }}>
-    //       <div className="counter__content">
-    //         <h5 className="card-title">{name}</h5>
-    //         <img
-    //           src={image}
-    //           className="card-img-top"
-    //           alt="Imagen de Producto"
-    //         />
-    //         <p>{description}</p>
-    //         <h6>${price}</h6>
-    //       </div>
-    //     </div>
-    //   </Link>
-    // </div>
   );
 };
 
