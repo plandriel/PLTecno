@@ -60,7 +60,7 @@ const ItemDetailPage = ({ onAdd }) => {
   const handleClick = () => {
     setQnt((value) => value + quantity);
     article.quantity = quantity;
-    setCompraFin(true)
+    setCompraFin(true);
 
     const prod = {
       id: article.id,
@@ -74,9 +74,13 @@ const ItemDetailPage = ({ onAdd }) => {
       type: article.type,
       image: article.image,
     };
-
+    
     setCart((value) => [...value, prod]);
+    
+    console.log(prod.quantity)
   };
+
+  
 
   return (
     <div className="itemPage">

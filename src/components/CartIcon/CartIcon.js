@@ -13,6 +13,8 @@ const CartIcon = () => {
     }
   }, [cart, setQnt]);
 
+    
+
   return (
     <Badge badgeContent={qnt} color="secondary">
       <ShoppingCartIcon fontSize="large" />
