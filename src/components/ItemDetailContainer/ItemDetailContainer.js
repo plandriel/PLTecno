@@ -8,9 +8,7 @@ const ItemDetailContainer = ({ product, onAdd }) => {
 
   const getProduct = () => {
     return new Promise((res, rej) => {
-      setTimeout(() => {
-        res(product);
-      }, 1000);
+      res(product);
     });
   };
 

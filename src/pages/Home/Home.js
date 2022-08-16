@@ -4,7 +4,7 @@ import Payments from "../../components/Payments/Payments";
 import Carousel from "../../components/Carousel/Carousel"
 
 import "./Home.scss";
-// import { Carousel } from "bootstrap";
+import MenuCategorias from "../../components/MenuCategorias/MenuCategorias";
 
 const Home = ({ greeting, onAdd }) => {
   return (
@@ -12,6 +12,8 @@ const Home = ({ greeting, onAdd }) => {
       
       <Carousel />
       <Payments />
+
+      <MenuCategorias />
 
       <ItemList onAdd={onAdd} />
     </main>

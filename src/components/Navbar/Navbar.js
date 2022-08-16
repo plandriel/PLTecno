@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CartIcon from "../CartIcon/CartIcon";
 import { Images } from "../../utils/images.js";
-
 import "./Navbar.scss";
 
 const Navbar = () => {

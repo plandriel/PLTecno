@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import ItemCount from "../../components/ItemCount/ItemCount";
 import Loading from "../../components/Loading/Loading";
-import CartContext from "../../contexts/cartContext";
+import { CartContext } from "../../contexts/cartContext";
 import { getFirestore } from "../../firebase";
+import { Button } from "@material-ui/core";
 
 import "./ItemDetailPage.scss";
 
@@ -13,6 +14,7 @@ const ItemDetailPage = ({ onAdd }) => {
   const [product, setProduct] = useState();
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
+  const [compraFin, setCompraFin] = useState(false);
 
   useEffect(() => {
     let isSubscribed = true;
@@ -46,11 +48,19 @@ const ItemDetailPage = ({ onAdd }) => {
     setArticle(product);
   }, [product]);
 
+  const styleButtom = {
+    width: "86%",
+    marginTop: "5px",
+    backgroundColor: "green",
+    color: "white",
+  };
+
   const [quantity, setQuantity] = useState(1);
 
   const handleClick = () => {
     setQnt((value) => value + quantity);
     article.quantity = quantity;
+    setCompraFin(true)
 
     const prod = {
       id: article.id,
@@ -98,20 +108,27 @@ const ItemDetailPage = ({ onAdd }) => {
                     <h6>Stock: {product.stock}</h6>
                   </div>
                   <div className="itemPage__detail-buy-sale-buttons">
-                    <ItemCount
-                      initial={1}
-                      min={0}
-                      max={product.stock}
-                      onAdd={onAdd}
-                      setQuantity={setQuantity}
-                    />
-                    <div className="counter btn-buy" style={{ width: "15rem" }}>
-                      <div className="counter__buttonAdd">
-                        <button onClick={handleClick}>
-                          Agregar al carrito {quantity}
-                        </button>
-                      </div>
-                    </div>
+                  {
+                  compraFin
+                    ? 
+                      <Link to="/cart">
+                        <button className='btn btn-primary'>Finalizar compra</button>
+                      </Link>
+                    : 
+                      <>
+                      <ItemCount  initial={1} min={0} max={product.stock} setQuantity={setQuantity}  />
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          style={styleButtom}
+                          onClick={handleClick}
+                          className="item-detail__btn"
+                        >
+                          Agregar al carrito 
+                        </Button>
+                      </>
+                  }
+                    
                   </div>
                 </div>
               </div>

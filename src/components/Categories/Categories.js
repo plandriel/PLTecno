@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "../../components/ItemDetail/ItemDetail";
-import Loading from "../../components/Loading/Loading";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import Loading from "../Loading/Loading";
 import { getFirestore } from "../../firebase";
 
 
@@ -12,7 +12,7 @@ const Categories = () => {
   const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
 
-  // Traingo datos desde Firebase
+  
   useEffect(() => {
     const db = getFirestore();
     const itemCollection = db.collection("items");

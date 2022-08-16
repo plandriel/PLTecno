@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import CartContext from "../../contexts/cartContext";
+import { CartContext } from "../../contexts/cartContext";
 
 import Badge from "@material-ui/core/Badge";
 

@@ -16,7 +16,7 @@ const Item = ({ product }) => {
         <div className="contentBox">
           <h3>{name}</h3>
           <h2 className="price">$ {price}</h2>
-          <p className="buy">Comprar YA!</p>
+          <p className="buy">VER MAS</p>
         </div>
       </Link>
     </div>
