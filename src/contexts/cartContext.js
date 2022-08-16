@@ -9,7 +9,7 @@ const CartCustomProvider = ({ children }) => {
 
     const getQtyProducts = () => {
         let quantity = 0;
-        cart.forEach(product => quantity += product.qnt);
+        cart.forEach(product => quantity += product.quantity);
         setQnt(quantity);
     }
 
